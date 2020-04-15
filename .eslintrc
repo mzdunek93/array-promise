@@ -1,0 +1,26 @@
+{
+  "plugins": ["@typescript-eslint", "prettier"],
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "prettier/@typescript-eslint"
+  ],
+  "rules": {
+    "arrow-body-style": ["error", "as-needed"],
+    "space-before-function-paren": [
+      "error",
+      {
+        "anonymous": "always",
+        "named": "never",
+        "asyncArrow": "always"
+      }
+    ],
+    "no-multi-spaces": ["error", { "ignoreEOLComments": false }],
+    "no-console": ["warn", { "allow": ["error"] }],
+    "prettier/prettier": ["error"],
+    "object-shorthand": ["error", "always"],
+    "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+    "eol-last": ["error", "always"],
+    "@typescript-eslint/explicit-function-return-type": "off"
+  }
+}
