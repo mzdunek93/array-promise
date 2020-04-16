@@ -153,6 +153,8 @@ export default class ArrayPromise<T> extends Promise<T[]> {
       resolve(arr.filter((_, i) => filter[i]))
     })
   }
-  public reduce = async <P>(fn: (acc: P, el: T, i: number, arr: T[]) => P, init: P): Promise<P> =>
-    (await this).reduce(fn, init)
+  public async reduce(fn: (acc: T, el: T, i: number, arr: T[]) => T, init?: undefined): Promise<T>
+  public async reduce<P>(fn: (acc: P, el: T, i: number, arr: T[]) => P, init: P): Promise<P> {
+    return (await this).reduce(fn, init)
+  }
 }
