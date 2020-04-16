@@ -4,7 +4,8 @@
   "description": "TypeScripted utility for asynchronously handling arrays, including concurrency limits",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "tsc"
   },
   "keywords": [
     "promise",
